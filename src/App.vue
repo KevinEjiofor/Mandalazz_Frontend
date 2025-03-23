@@ -1,28 +1,21 @@
-  <script>
+<script>
  import Navbar from './components/Navbar.vue';
- import Hero from './components/Hero.vue';
- import ProductCard from './components/ProductCard.vue';
 import Footer from './components/Footer.vue';
  
   
   export default {
     name: 'App',
-    components: {
+    compoents: {
       Navbar,
-      Hero,
-      ProductCard ,
       Footer,
     }
   }
-  </script>
+</script>
 
 <template>
-  <Navbar />
-  <Hero />
-  <ProductCard />
+  <Navbar :onSearch="handleSearch" />
+  <router-view />
   <Footer />
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
 
 
@@ -33,6 +26,18 @@ import Footer from './components/Footer.vue';
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+  background: transparent !important;
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background: #eaecf0 !important;
+  max-height: 20px !important;
+  border-radius: 32px;
 }
 </style>
