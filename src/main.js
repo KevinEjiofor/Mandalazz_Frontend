@@ -5,6 +5,7 @@ import 'primeicons/primeicons.css'
 import Card from 'primevue/card';
 import Button from 'primevue/button';
 import PrimeVue from 'primevue/config';
+import router from './router/index'
 
 
 
@@ -14,7 +15,7 @@ import PrimeVue from 'primevue/config';
 import 'primeicons/primeicons.css'; // Icons
 
 const app = createApp(App)
-
+app.use(router);
 app.use(PrimeVue)
 app.component('Card', Card);
 app.component('Button', Button);
